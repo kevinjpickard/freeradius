@@ -3,7 +3,7 @@ LABEL maintainer 'Kevin Pickard <kevinjpickard@gmail.com>'
 
 WORKDIR /etc/raddb
 
-RUN apt update && apt upgrade -y && apt install -y freeradius
+RUN apt-get update && apt-get upgrade -y && apt-get install -y freeradius
 
 VOLUME \
 	/opt/db/
@@ -13,4 +13,3 @@ EXPOSE \
 	1813 \
 	18120
 
-CMD ["radiusd","-xx","-f"]
